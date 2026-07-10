@@ -1,15 +1,15 @@
 const User = require("../models/user");
 
-// =======================
+
 // Render Signup
-// =======================
+
 module.exports.renderSignupForm = (req, res) => {
     res.render("user/signup");
 };
 
-// =======================
+
 // Signup
-// =======================
+
 module.exports.signUp = async (req, res, next) => {
     console.log("1. Signup started");
 
@@ -42,16 +42,16 @@ module.exports.signUp = async (req, res, next) => {
     }
 };
 
-// =======================
+
 // Render Login
-// =======================
+
 module.exports.renderLoginForm = (req, res) => {
     res.render("user/login");
 };
 
-// =======================
+
 // Login
-// =======================
+
 module.exports.login = (req, res) => {
 
     req.flash("success", "Welcome back!");
@@ -61,9 +61,9 @@ module.exports.login = (req, res) => {
     res.redirect(redirectUrl);
 };
 
-// =======================
+
 // Logout
-// =======================
+
 module.exports.logout = (req, res, next) => {
 
     req.logout((err) => {

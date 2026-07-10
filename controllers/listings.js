@@ -2,24 +2,23 @@ const Listing = require("../models/listing");
 const cloudinary = require("../cloudConfig");
 const streamifier = require("streamifier");
 
-// =====================
+
 // Index
-// =====================
+
 module.exports.index = async (req, res) => {
     const allListings = await Listing.find({});
     res.render("listings/index", { allListings });
 };
 
-// =====================
+
 // Render New Form
-// =====================
+
 module.exports.renderNewForm = (req, res) => {
     res.render("listings/new");
 };
 
-// =====================
 // Create Listing
-// =====================
+
 module.exports.createForm = async (req, res) => {
 
     const listing = new Listing(req.body.listing);
@@ -56,9 +55,9 @@ module.exports.createForm = async (req, res) => {
     res.redirect("/listings");
 };
 
-// =====================
+
 // Show Listing
-// =====================
+
 module.exports.showListing = async (req, res) => {
 
     const { id } = req.params;
@@ -80,9 +79,9 @@ module.exports.showListing = async (req, res) => {
     res.render("listings/show", { listing });
 };
 
-// =====================
+
 // Edit Form
-// =====================
+
 module.exports.editForm = async (req, res) => {
 
     const { id } = req.params;
@@ -109,9 +108,9 @@ module.exports.editForm = async (req, res) => {
     });
 };
 
-// =====================
+
 // Update Listing
-// =====================
+
 module.exports.updateListing = async (req, res) => {
 
     const { id } = req.params;
@@ -161,9 +160,8 @@ module.exports.updateListing = async (req, res) => {
     res.redirect(`/listings/${id}`);
 };
 
-// =====================
+
 // Delete Listing
-// =====================
 module.exports.destroyListing = async (req, res) => {
 
     const { id } = req.params;

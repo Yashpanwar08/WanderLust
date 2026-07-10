@@ -1,115 +1,63 @@
-
-body{
-    font-family: "Plus Jakarta Sans", sans-serif !important;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.container{
-    flex: 1;
-}
-
-.navbar{
-    height: 5rem;
-    background-color: white;
-}
-
-.nav-link{
-    color: black !important;
-}
-
-.fa-compass{
-    color: red;
-    font-size: 2rem;
-}
-
-/* footer */
-
-.f-info-links a:hover{
- text-decoration: underline;
-}
-
-.f-info-links , .f-info-social , .f-info-brand{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.f-info-social i{
-    font-size: 1.3rem;
-    margin-right: 1rem;
-}
-
-.f-info-links a{
-    text-decoration: none;
-    color: #222222;
-    text-align: center;
-}
-
-.f-info{
-    text-align: center;
-    height: 8rem;
-    background-color: #ebebeb;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: space-evenly;
-}
-
-/*card*/
-
-.listing-card{
+/* Listing Card */
+.listing-card {
     border: none !important;
+    border-radius: 18px !important;
+    overflow: hidden;
     margin-bottom: 2rem !important;
-
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background: #fff;
 }
 
-.card-img-top{
-    border-radius: 1rem !important;
+.listing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+/* Image */
+.card-img-top {
     width: 100% !important;
+    height: 18rem;
     object-fit: cover !important;
+    border-radius: 18px 18px 0 0 !important;
+    transition: transform 0.4s ease;
 }
 
-.card-body{
-    padding: 0 !important;
-
+.listing-card:hover .card-img-top {
+    transform: scale(1.05);
 }
 
-.card-text p{
-    font-weight: 400;
+/* Body */
+.card-body {
+    padding: 1rem !important;
 }
 
-.listing-link{
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #222;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Link */
+.listing-link {
     text-decoration: none;
+    color: inherit;
 }
 
-.card-img-overlay{
-    opacity: 0;
+.price {
+    color: #ff385c;
+    font-weight: 700;
+    font-size: 1rem;
 }
 
-.card-img-overlay:hover{
-    opacity: 0.2;
-    background-color: white;
-}
-
-.lis{
-    text-align: center;
-}
-
-/*show page*/
-
-.show-img{
-    height: 22vh;
-}
-
-.btns{
-    display: flex;
-}
-
-.show-card{
-    padding-left: 0;
-    padding-right: 0;
+.price span {
+    color: #777;
+    font-weight: 400;
 }
