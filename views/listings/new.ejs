@@ -1,0 +1,72 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    
+
+   
+    <div class="row">
+        <div class="col-8 offset-2">
+    <form method = "POST" action ="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        
+ <h2 class="lis">Create New Listing</h2>
+    <br>
+      
+        <br>
+        <div class="mb-3">
+            <label for="tilte" class="form-label">Title</label>
+        <input name="listing[title]" placeholder="enter title" type="text" class="form-control" reduired/>
+        
+        </div>
+        <br>
+
+        <div class="mb-3">
+            
+        <label for="description" class="form-label">Description</label>
+        <textarea name="listing[description]" placeholder="enter description" type="text" class="form-control" required></textarea>
+        <div class="invalid-feedback">invalid title</div>
+        </div>
+        <br>
+
+         <div class="mb-3">
+            
+        <label for="Image" class="form-label">Image</label>
+        <input name="listing[image]" type="file" class="form-control" required />
+        
+        </div>
+        <br>
+
+
+        <div class="row">
+       <div class="mb-3 col-md-8">
+         <label for="Location" class="form-label">Location</label>
+        <input name="listing[location]" placeholder="enter location" type="text" class="form-control">
+        <div class="invalid-feedback">Enter valid location</div>
+       </div>
+        <br>
+
+        <div class="mb-3 col-4 ">
+            <label for="price" class="form-label">Price</label>
+        <input name="listing[price]" placeholder="enter price"   class="form-control" required>
+        <div class="invalid-feedback">please enter a valid price</div>
+        </div>
+        </div>
+        <br>
+
+
+        <div class="mb-3">
+            <label for="Country" class="form-label">Country</label>
+        <input name="listing[country]" placeholder="enter country name" type="text" class="form-control" required>
+        <div class="invalid-feedback">please enter a valid country</div>
+        </div>
+        <br>
+        <button class="btn btn-dark ">
+            Add
+        </button>
+        <br><br><br>
+
+    </form>
+    </div>
+    </div>
+
+
+    
+</body>
